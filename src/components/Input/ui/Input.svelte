@@ -55,7 +55,7 @@
     }
 
     input {
-        z-index: 100;
+        z-index: 10;
         border: none;
         background: transparent;
         transition: 200ms;
