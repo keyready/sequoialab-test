@@ -1,7 +1,7 @@
 <script lang="ts">
-	import '../styles/index.css';
+    import '../styles/index.css';
 </script>
 
 <div>
-	<slot />
+    <slot />
 </div>
