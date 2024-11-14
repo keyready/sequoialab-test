@@ -171,8 +171,8 @@
         {/if}
 
         <Modal setIsOpened={() => (selectedIMDG = {})} isOpened={!!selectedIMDG.id}>
-            <div class="flex flex-col gap-5">
-                <h1 class="font-bold text-black">{selectedIMDG.name}</h1>
+            <div class="flex flex-col gap-2">
+                <h1 class="text-xl font-bold text-black/70">{selectedIMDG.name}</h1>
                 <p class="text-start">Класс: {selectedIMDG.col17}</p>
                 <p class="text-start">Тип: {selectedIMDG.col19}</p>
             </div>
