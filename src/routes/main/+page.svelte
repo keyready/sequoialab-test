@@ -46,7 +46,9 @@
     // обработка смены страницы пагинатора
     const handlePageChange = async (page: { detail: number }) => {
         isLoading = true;
-        const res = await api.get(`/api/imdg?perPage=5&page=${page.detail}&search=${searchString}`);
+        const res = await api.get(
+            `/api/imdg?perPage=5&page=${page.detail + 1}&search=${searchString}`,
+        );
         if (res.status === 200) {
             IMDG = res.data;
         }
