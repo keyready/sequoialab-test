@@ -6,6 +6,7 @@
     import { type PaginationSettings, Paginator, ProgressRadial } from '@skeletonlabs/skeleton';
     import { Input } from '@/components/Input';
     import { Modal } from '@/components/Modal';
+    import { Loader } from '@/components/Loader';
 
     // самая просто проверка на авторизацию - наличие токена в локалстораге
     // я полностью понимаю, что это неверно, но при первом же запросе сервер вернет 401,
@@ -99,19 +100,7 @@
         <h1 class="font-bold text-center text-main text-4xl mb-10">Опасные вещества</h1>
 
         {#if isLoading}
-            <div
-                class="flex items-center bg-opacity-20 bg-black z-50 backdrop-blur-md justify-center fixed top-0 bottom-0 right-0 left-0"
-            >
-                <div>
-                    <ProgressRadial
-                        stroke={40}
-                        meter="stroke-main"
-                        track="stroke-main/30"
-                        strokeLinecap="round"
-                        value={undefined}
-                    />
-                </div>
-            </div>
+            <Loader />
         {/if}
 
         {#if IMDG.length}
